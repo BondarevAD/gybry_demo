@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:all_country_code/all_country_code.dart';
+import 'package:gybry_demo/presentation/pages/profile/profile_page.dart';
 import 'package:gybry_demo/presentation/pages/profile_set_up/utils/constants.dart';
 import 'package:gybry_demo/presentation/widgets/dropdown_menu.dart';
 import 'package:gybry_demo/presentation/widgets/sign_up_text_field.dart';
@@ -156,6 +157,11 @@ class _ProfileSetUpPageBodyState extends State<ProfileSetUpPageBody> {
       ScaffoldMessenger.of(
         context,
       ).showSnackBar(const SnackBar(content: Text('Регистрация успешна!')));
+
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => ProfilePage()),
+      );
     }
   }
 }
