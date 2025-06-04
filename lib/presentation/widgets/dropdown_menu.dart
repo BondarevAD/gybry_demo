@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
-class SignUpDropdownMenu extends StatelessWidget {
+class AppDropdownMenu extends StatelessWidget {
   final String label;
   final List<String> items;
   final String? selectedValue;
   final ValueChanged<String?> onChanged;
   final Color labelColor;
 
-  const SignUpDropdownMenu({
-    Key? key,
+  const AppDropdownMenu({
+    super.key,
     required this.label,
     required this.items,
     required this.selectedValue,
     required this.onChanged,
     this.labelColor = const Color(0xFFB0B0B0), // lightGrey по умолчанию
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

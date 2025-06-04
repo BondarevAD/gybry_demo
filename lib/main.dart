@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gybry_demo/presentation/pages/login/login_page.dart';
 import 'package:gybry_demo/presentation/pages/sign_up/sign_up_page.dart';
 import 'package:gybry_demo/presentation/themes/themes.dart';
 import 'package:gybry_demo/presentation/utils/app_colors.dart';
@@ -13,8 +14,12 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(body: const SignUpPage(), backgroundColor: white),
+      home: Scaffold(body: const LoginPage(), backgroundColor: white),
       theme: lightTheme,
+      routes: {
+        '/login': (context) => const LoginPage(),
+        '/sign-up': (context) => const SignUpPage(),
+      },
     );
   }
 }
