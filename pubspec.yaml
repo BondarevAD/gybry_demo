@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   all_country_code: ^3.0.0+5
+  telegram_web_app: ^0.3.3
 
 dev_dependencies:
   flutter_test:
