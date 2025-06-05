@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gybry_demo/presentation/utils/extensions.dart';
 
 class SigningTextField extends StatelessWidget {
   final String label;
@@ -31,7 +32,7 @@ class SigningTextField extends StatelessWidget {
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(borderRadius),
         ),
-        labelStyle: TextStyle(color: labelColor),
+        labelStyle: context.theme.textTheme.bodyMedium!.copyWith(fontSize: 16),
         suffixIcon: suffixIcon,
       ),
       validator: validator,

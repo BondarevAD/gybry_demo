@@ -26,7 +26,11 @@ final lightTheme = ThemeData(
   ),
   textTheme: const TextTheme(
     displayLarge: TextStyle(color: darkPurple, fontWeight: FontWeight.bold),
-    bodyLarge: TextStyle(color: Colors.black87),
+    bodyLarge: TextStyle(
+      color: Colors.black87,
+      fontSize: 24,
+      fontWeight: FontWeight.bold,
+    ),
     bodyMedium: descriptionFont,
   ),
   scaffoldBackgroundColor: white,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:all_country_code/all_country_code.dart';
 import 'package:gybry_demo/presentation/pages/profile/profile_page.dart';
+import 'package:gybry_demo/presentation/pages/recovery_page/recovery_page.dart';
 import 'package:gybry_demo/presentation/widgets/phone_field.dart';
 import 'package:gybry_demo/presentation/widgets/sign_up_text_field.dart';
 import 'package:gybry_demo/presentation/pages/sign_up/sign_up_page.dart';
@@ -92,7 +93,10 @@ class _LoginPageBodyState extends State<LoginPageBody> {
               alignment: Alignment.centerRight,
               child: TextButton(
                 onPressed: () {
-                  // TODO: Implement forgot password logic
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const RecoveryPage()),
+                  );
                 },
                 child: const Text('Забыли пароль?'),
               ),
@@ -117,10 +121,7 @@ class _LoginPageBodyState extends State<LoginPageBody> {
                         label: Text(
                           'Email',
                           style: TextStyle(
-                            color:
-                                _useEmail
-                                    ? Colors.white
-                                    : Colors.black, // цвет зависит от выбора
+                            color: _useEmail ? Colors.white : Colors.black,
                           ),
                         ),
                         selected: _useEmail,
@@ -137,10 +138,7 @@ class _LoginPageBodyState extends State<LoginPageBody> {
                         label: Text(
                           'Телефон',
                           style: TextStyle(
-                            color:
-                                !_useEmail
-                                    ? Colors.white
-                                    : Colors.black, // цвет зависит от выбора
+                            color: !_useEmail ? Colors.white : Colors.black,
                           ),
                         ),
                         selected: !_useEmail,

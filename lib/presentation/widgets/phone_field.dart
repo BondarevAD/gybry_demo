@@ -1,6 +1,7 @@
 import 'package:all_country_code/all_country_code.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:gybry_demo/presentation/utils/extensions.dart';
 
 class PhoneInputField extends StatelessWidget {
   final List<Country> countries;
@@ -50,7 +51,9 @@ class PhoneInputField extends StatelessWidget {
             decoration: InputDecoration(
               hintText: hintText,
               labelText: labelText,
-              labelStyle: TextStyle(color: labelColor),
+              labelStyle: context.theme.textTheme.bodyMedium!.copyWith(
+                fontSize: 16,
+              ),
               alignLabelWithHint: true,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(borderRadius),
