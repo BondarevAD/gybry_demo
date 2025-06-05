@@ -32,6 +32,7 @@ final lightTheme = ThemeData(
       fontWeight: FontWeight.bold,
     ),
     bodyMedium: descriptionFont,
+    bodySmall: TextStyle(color: black),
   ),
   scaffoldBackgroundColor: white,
   cardTheme: CardTheme(

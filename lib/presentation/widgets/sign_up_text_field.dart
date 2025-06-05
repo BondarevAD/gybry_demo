@@ -36,7 +36,9 @@ class SigningTextField extends StatelessWidget {
         suffixIcon: suffixIcon,
       ),
       validator: validator,
-      style: TextStyle(fontWeight: textWeight),
+      style: context.theme.textTheme.bodySmall!.copyWith(
+        fontWeight: FontWeight.bold,
+      ),
       obscureText: isPassword ?? false,
     );
   }
