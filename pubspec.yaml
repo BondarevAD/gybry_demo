@@ -10,7 +10,11 @@ dependencies:
   flutter:
     sdk: flutter
   all_country_code: ^3.0.0+5
-  telegram_web_app: ^0.3.3
+  gybry_telegram_web_app:
+    git:
+      url: https://github.com/BondarevAD/gybry_telegram_web_app
+      
+  vibration: ^3.1.3
 
 dev_dependencies:
   flutter_test:
